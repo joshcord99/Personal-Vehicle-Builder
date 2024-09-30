@@ -53,7 +53,7 @@ class Cli {
       });
   }
 
-  // method to create a vehicle
+ 
   createVehicle(): void {
     inquirer
       .prompt([
@@ -62,15 +62,22 @@ class Cli {
           name: "vehicleType",
           message: "Select a vehicle type",
           // TODO: Update the choices array to include Truck and Motorbike
-          choices: ["Car"],
+          choices: ["Car", "Truck", "Motorbike"],
         },
       ])
+
+       // method to create a vehicle
       .then((answers) => {
         if (answers.vehicleType === "Car") {
+
           // create a car
-          this.createCar();
+          this.createCar(); 
+        }  else if (answers.vehicleType === "Truck")
+        {this.createTruck();
+        } else if (answers.vehicleType ==="Motorbike")
+        {
+          this.createMotorbike();
         }
-        // TODO: add statements to create a truck or motorbike if the user selects the respective vehicle type
       });
   }
 

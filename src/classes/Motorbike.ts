@@ -3,6 +3,10 @@ import Vehicle from './Vehicle.js';
 import Wheel from './Wheel.js';
 
 // TODO: The Motorbike class should extend the Vehicle class
+  // TODO: Declare properties of the Motorbike class
+  // TODO: The properties should include vin, color, make, model, year, weight, top speed, and wheels
+  // TODO: The types should be as follows: vin (string), color (string), make (string), model (string), year (number), weight (number), topSpeed (number), wheels (Wheel[])
+
 class Motorbike extends Vehicle {
   vin: string;
   color: string;
@@ -14,6 +18,8 @@ class Motorbike extends Vehicle {
   wheels: Wheel[];
 
   // Constructor for the Car class
+    // TODO: Create a constructor that accepts the properties of the Motorbike class
+    // TODO: The constructor should call the constructor of the parent class, Vehicle
   constructor(
     vin: string,
     color: string,
@@ -29,6 +35,7 @@ class Motorbike extends Vehicle {
     super();
 
     // Initialize properties of the Car class
+    // TODO: The constructor should initialize the properties of the Motorbike class
     this.vin = vin;
     this.color = color;
     this.make = make;
@@ -36,22 +43,26 @@ class Motorbike extends Vehicle {
     this.year = year;
     this.weight = weight;
     this.topSpeed = topSpeed;
+  
+  
+
+
+    
     // Check if the wheels array has 4 elements
     // If not, create 4 new Wheel objects
     // Otherwise, use the provided wheels array
     if (wheels.length !== 4) {
-      this.wheels = [new Wheel(), new Wheel(), new Wheel(), new Wheel()];
+      this.wheels = [new Wheel(), new Wheel()];
     } else {
       this.wheels = wheels;
     }
   }
-  // TODO: Declare properties of the Motorbike class
-  // TODO: The properties should include vin, color, make, model, year, weight, top speed, and wheels
-  // TODO: The types should be as follows: vin (string), color (string), make (string), model (string), year (number), weight (number), topSpeed (number), wheels (Wheel[])
 
-  // TODO: Create a constructor that accepts the properties of the Motorbike class
-    // TODO: The constructor should call the constructor of the parent class, Vehicle
-    // TODO: The constructor should initialize the properties of the Motorbike class
+  
+
+
+
+    
     // TODO: The constructor should check if the wheels array has 2 elements and create 2 new default Wheel objects if it does not
 
   // TODO: Implement the wheelie method
