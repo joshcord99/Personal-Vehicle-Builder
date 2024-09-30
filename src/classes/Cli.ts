@@ -173,8 +173,11 @@ class Cli {
       .then((answers) => {
         // TODO: Use the answers object to pass the required properties to the Truck constructor
         // TODO: push the truck to the vehicles array
+        this.vehicles.push(Truck);
         // TODO: set the selectedVehicleVin to the vin of the truck
+        this.selectedVehicleVin = Truck.vin;
         // TODO: perform actions on the truck
+        this.performActions();
       });
   }
 
@@ -236,8 +239,11 @@ class Cli {
       .then((answers) => {
         // TODO: Use the answers object to pass the required properties to the Motorbike constructor
         // TODO: push the motorbike to the vehicles array
+        this.vehicles.push(Motorbike);
         // TODO: set the selectedVehicleVin to the vin of the motorbike
+        this.selectedVehicleVin = Motorbike.vin;
         // TODO: perform actions on the motorbike
+        this.performActions();
       });
   }
 
@@ -260,8 +266,14 @@ class Cli {
       ])
       .then((answers) => {
         // TODO: check if the selected vehicle is the truck
-        // TODO: if it is, log that the truck cannot tow itself then perform actions on the truck to allow the user to select another action
-        // TODO: if it is not, tow the selected vehicle then perform actions on the truck to allow the user to select another action
+          // TODO: if it is, log that the truck cannot tow itself then perform actions on the truck to allow the user to select another action
+        if (this.selectedVehicle === Truck){
+console.log = 'truck cannot tow itself'
+   // TODO: if it is not, tow the selected vehicle then perform actions on the truck to allow the user to select another action
+        } else {
+          
+        }
+     
       });
   }
 

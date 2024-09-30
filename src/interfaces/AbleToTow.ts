@@ -9,7 +9,7 @@ interface AbleToTow {
     // declare the properties
     towingCapacity: number;
     // tow method takes a truck or a motorbike or a car as an argument
-    tow(vehicle: Truck | Motorbike | Car): void;
+    tow(vehicle: Car | Motorbike | Truck): void;
 }
 
 
