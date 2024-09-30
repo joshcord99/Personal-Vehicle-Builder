@@ -6,7 +6,10 @@ import Wheel from './Wheel.js';
 import AbleToTow from '../interfaces/AbleToTow.js';
 
 // TODO: The Truck class should extend the Vehicle class and should implement the AbleToTow interface
-class Truck extends Vehicle {
+class Truck  extends Vehicle {
+  // TODO: Declare properties of the Truck class
+   // TODO: The properties should include vin, color, make, model, year, weight, top speed, wheels, and towing capacity
+  // TODO: The types should be as follows: vin (string), color (string), make (string), model (string), year (number), weight (number), topSpeed (number), wheels (Wheel[]), towingCapacity (number)
   vin: string;
   color: string;
   make: string;
@@ -15,10 +18,10 @@ class Truck extends Vehicle {
   weight: number;
   topSpeed: number;
   wheels: Wheel[];
+  towingCapacity: number;
+ 
 
-  // Constructor for the Car class
-    // TODO: Create a constructor that accepts the properties of the Motorbike class
-        // TODO: The constructor should call the constructor of the parent class, Vehicle
+  // TODO: Create a constructor that accepts the properties of the Truck class
   constructor(
     vin: string,
     color: string,
@@ -27,14 +30,12 @@ class Truck extends Vehicle {
     year: number,
     weight: number,
     topSpeed: number,
-    wheels: Wheel[]
+    wheels: Wheel[],
+    towingCapacity: number
   ) 
-  {
-    // Call the constructor of the parent class, Vehicle
-    super();
-
-    // Initialize properties of the Car class
-    // TODO: The constructor should initialize the properties of the Motorbike class
+    // TODO: The constructor should call the constructor of the parent class, Vehicle
+    { super();
+    // TODO: The constructor should initialize the properties of the Truck class
     this.vin = vin;
     this.color = color;
     this.make = make;
@@ -42,28 +43,14 @@ class Truck extends Vehicle {
     this.year = year;
     this.weight = weight;
     this.topSpeed = topSpeed;
-
-    
-    // Check if the wheels array has 4 elements
-    // If not, create 4 new Wheel objects
-    // Otherwise, use the provided wheels array
+    this.towingCapacity = towingCapacity;
+    // TODO: The constructor should check if the wheels array has 4 elements and create 4 new default Wheel objects if it does not
     if (wheels.length !== 4) {
       this.wheels = [new Wheel(), new Wheel(), new Wheel(), new Wheel()];
     } else {
       this.wheels = wheels;
     }
   }
-
-  
-  // TODO: Declare properties of the Truck class
-  // TODO: The properties should include vin, color, make, model, year, weight, top speed, wheels, and towing capacity
-  // TODO: The types should be as follows: vin (string), color (string), make (string), model (string), year (number), weight (number), topSpeed (number), wheels (Wheel[]), towingCapacity (number)
-
-  // TODO: Create a constructor that accepts the properties of the Truck class
-    // TODO: The constructor should call the constructor of the parent class, Vehicle
-    // TODO: The constructor should initialize the properties of the Truck class
-    // TODO: The constructor should check if the wheels array has 4 elements and create 4 new default Wheel objects if it does not
-
   // TODO: Implement the tow method from the AbleToTow interface
   tow(vehicle: Truck | Motorbike | Car): void {
     // TODO: Get the make an model of the vehicle if it exists

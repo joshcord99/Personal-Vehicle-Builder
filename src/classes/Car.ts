@@ -36,6 +36,7 @@ class Car extends Vehicle {
     this.year = year;
     this.weight = weight;
     this.topSpeed = topSpeed;
+    
     // Check if the wheels array has 4 elements
     // If not, create 4 new Wheel objects
     // Otherwise, use the provided wheels array
