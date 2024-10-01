@@ -1,5 +1,5 @@
 
-# PERSONAL-VEHICLE-BUILDER
+# PERSONAL-VEHICLE-BUILDER-GENERATOR
 ![](https://github.com/joshcord99/Personal-Vehicle-Builder-Generator/blob/main/Personal-Vehicle-Builder-Generator.gif)
 
 
