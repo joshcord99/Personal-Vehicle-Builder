@@ -28,10 +28,10 @@ Install inquirer package
 None.
 
 ## Contributions
-None.
+Feel free to fork this project and submit a pull request for any improvements.
 
 ## Test
-None.
+Try running the Personal-Vehicle-Builder-Generator with different inputs.
 
 
 ## Question
