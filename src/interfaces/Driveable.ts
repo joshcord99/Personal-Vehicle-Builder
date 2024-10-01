@@ -11,6 +11,5 @@ interface Driveable {
   turn(direction: string): void;
   reverse(): void;
 }
-
 // export the Driveable interface
 export default Driveable;

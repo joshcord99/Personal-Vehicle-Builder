@@ -35,7 +35,6 @@ class Vehicle implements Driveable {
       console.log('Start the vehicle first');
     }
   }
-
   // Method to decelerate the vehicle
   decelerate(change: number): void {
     // Check if the vehicle is started
@@ -46,14 +45,12 @@ class Vehicle implements Driveable {
       console.log('Start the vehicle first');
     }
   }
-
   // Method to stop the vehicle
   stop(): void {
     this.currentSpeed = 0;
     this.started = false;
     console.log('Vehicle stopped');
   }
-
   // Method to turn the vehicle
   turn(direction: string): void {
     // Check if the vehicle is started
@@ -63,7 +60,6 @@ class Vehicle implements Driveable {
       console.log('Start the vehicle first');
     }
   }
-
   // Method to reverse the vehicle
   reverse(): void {
     // Check if the vehicle is started
@@ -74,6 +70,5 @@ class Vehicle implements Driveable {
     }
   }
 }
-
 // Export the Vehicle class
 export default Vehicle;

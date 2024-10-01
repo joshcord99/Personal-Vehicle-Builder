@@ -20,8 +20,6 @@ class Cli {
   constructor(vehicles: (Car | Motorbike | Truck)[]) {
     this.vehicles = vehicles;
   }
-
-
   // static method to generate a vin
   static generateVin(): string {
     // return a random string
@@ -30,7 +28,6 @@ class Cli {
       Math.random().toString(36).substring(2, 15)
     );
   }
-
   // method to choose a vehicle from existing vehicles
   chooseVehicle(): void {
     inquirer
@@ -54,7 +51,6 @@ class Cli {
         this.performActions();
       });
   }
-
   // method to create a vehicle
   createVehicle(): void {
     inquirer
@@ -81,7 +77,6 @@ class Cli {
         }
       });
   }
-
   // method to create a car
   createCar(): void {
     inquirer
@@ -137,7 +132,6 @@ class Cli {
         this.performActions();
       });
   }
-
   // method to create a truck
   createTruck(): void {
     inquirer
@@ -201,7 +195,6 @@ class Cli {
         this.performActions();
       });
   }
-
   // method to create a motorbike
   createMotorbike(): void {
     inquirer
@@ -273,7 +266,6 @@ class Cli {
           parseInt(answers.topSpeed),
           wheels,
         );
-
         // TODO: push the motorbike to the vehicles array
         this.vehicles.push(motorbike);
         // TODO: set the selectedVehicleVin to the vin of the motorbike
@@ -282,7 +274,6 @@ class Cli {
         this.performActions();
       });
   }
-
   // method to find a vehicle to tow
   // TODO: add a parameter to accept a truck object
   findVehicleToTow(truck: Truck): void {
@@ -317,8 +308,6 @@ class Cli {
         }
       });
   }
-
-
   // method to perform actions on a vehicle
   performActions(): void {
     inquirer
@@ -365,7 +354,7 @@ class Cli {
           const motorbike = this.vehicles.find(
             (vehicle) => vehicle.vin === this.selectedVehicleVin && vehicle instanceof Motorbike
           ) as Motorbike;
-  
+
           if (motorbike) {
             motorbike.wheelie();  // Assuming `wheelie()` exists in Motorbike class
             console.log(`${motorbike.make} ${motorbike.model} is performing a wheelie!`);
@@ -434,7 +423,6 @@ class Cli {
             }
           }
         }
-
         // TODO: add statements to perform the wheelie action only if the selected vehicle is a motorbike
         else if (answers.action === 'Select or create another vehicle') {
           // start the cli to return to the initial prompt if the user wants to select or create another vehicle
@@ -450,7 +438,6 @@ class Cli {
         }
       });
   }
-
   // method to start the cli
   startCli(): void {
     inquirer
@@ -473,6 +460,5 @@ class Cli {
       });
   }
 }
-
 // export the Cli class
 export default Cli;
