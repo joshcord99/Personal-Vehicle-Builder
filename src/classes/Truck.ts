@@ -6,7 +6,7 @@ import Wheel from './Wheel.js';
 import AbleToTow from '../interfaces/AbleToTow.js';
 
 // TODO: The Truck class should extend the Vehicle class and should implement the AbleToTow interface
-class Truck extends Vehicle {
+class Truck extends Vehicle implements AbleToTow {
   // TODO: Declare properties of the Truck class
   // TODO: The properties should include vin, color, make, model, year, weight, top speed, wheels, and towing capacity
   // TODO: The types should be as follows: vin (string), color (string), make (string), model (string), year (number), weight (number), topSpeed (number), wheels (Wheel[]), towingCapacity (number)
@@ -44,6 +44,8 @@ class Truck extends Vehicle {
     this.weight = weight;
     this.topSpeed = topSpeed;
     this.towingCapacity = towingCapacity;
+
+
     // TODO: The constructor should check if the wheels array has 4 elements and create 4 new default Wheel objects if it does not
     if (wheels.length !== 4) {
       this.wheels = [new Wheel(), new Wheel(), new Wheel(), new Wheel()];
@@ -51,10 +53,13 @@ class Truck extends Vehicle {
       this.wheels = wheels;
     }
   }
-  // TODO: Implement the tow method from the AbleToTow interface
-  AbleToTow(vehicle: Car | Motorbike | Truck): void {
-    // TODO: Get the make an model of the vehicle if it exists?
 
+  // TODO: Implement the tow method from the AbleToTow interface
+  // AbleToTow(vehicle: Car | Motorbike | Truck): void {
+    tow(vehicle: Car | Motorbike | Truck): void {
+   if (vehicle instanceof Motorbike || vehicle instanceof Car)
+
+    // TODO: Get the make an model of the vehicle if it exists?
     // TODO: Check if the vehicle's weight is less than or equal to the truck's towing capacity
     // TODO: If it is, log that the vehicle is being towed
     if (this.weight <= this.towingCapacity) {
@@ -79,7 +84,8 @@ class Truck extends Vehicle {
     console.log(`Year: ${this.year}`);
     console.log(`Weight: ${this.weight} lbs`);
     console.log(`Top Speed: ${this.topSpeed} mph`);
-    console.log(`Wheels: ${this.wheels}`);
+    console.log(`Wheels: ${this.wheels[0].getDiameter}`);
+    console.log(`Wheels: ${this.wheels[0].getTireBrand}`);
     console.log(`towingCapacity: ${this.towingCapacity}`);
   }
 }

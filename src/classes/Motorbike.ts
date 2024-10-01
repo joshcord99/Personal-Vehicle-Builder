@@ -68,7 +68,8 @@ class Motorbike extends Vehicle {
   console.log(`Weight: ${this.weight} lbs`);
   console.log(`Top Speed: ${this.topSpeed} mph`);
   console.log(`Color: ${this.color}`);
-  console.log(`Wheels: ${this.wheels}`);
+  console.log(`Wheels: ${this.wheels[0].getDiameter}`);
+  console.log(`Wheels: ${this.wheels[0].getTireBrand}`);
 }
 }
 // Export the Motorbike class as the default export
