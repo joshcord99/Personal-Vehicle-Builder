@@ -15,7 +15,7 @@ None.
 - [License](#license)
 - [Contributions](#contributions)
 - [Test](#test)
-- [Question](#question)
+- [Questions](#questions)
 - [Links](#links)
 
 ## Installation Instructions
@@ -35,7 +35,7 @@ Feel free to fork this project and submit a pull request for any improvements.
 Try running the Personal-Vehicle-Builder-Generator with different inputs.
 
 
-## Question
+## Questions
 - GitHub: [joshcord99](https://github.com/joshcord99)
 - Email: joshcord99@gmail.com
   
