@@ -1,6 +1,7 @@
 // Importing Vehicle and Wheel classes
-import Vehicle from './Vehicle.js';
-import Wheel from './Wheel.js';
+import Vehicle from "./Vehicle.js";
+import Wheel from "./Wheel.js";
+import { WHEEL_COUNTS } from "../constants/vehicleConstants.js";
 // Car class that extends Vehicle class
 class Car extends Vehicle {
     // Constructor for the Car class
@@ -15,11 +16,13 @@ class Car extends Vehicle {
         this.year = year;
         this.weight = weight;
         this.topSpeed = topSpeed;
-        // Check if the wheels array has 4 elements
-        // If not, create 4 new Wheel objects
+        // Check if the wheels array has the correct number of elements
+        // If not, create default Wheel objects
         // Otherwise, use the provided wheels array
-        if (wheels.length !== 4) {
-            this.wheels = [new Wheel(), new Wheel(), new Wheel(), new Wheel()];
+        if (wheels.length !== WHEEL_COUNTS.CAR) {
+            this.wheels = Array(WHEEL_COUNTS.CAR)
+                .fill(null)
+                .map(() => new Wheel());
         }
         else {
             this.wheels = wheels;

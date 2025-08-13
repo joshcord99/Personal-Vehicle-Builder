@@ -1,44 +1,50 @@
+# Personal Vehicle Builder Generator
 
-# PERSONAL-VEHICLE-BUILDER-GENERATOR
-![](https://github.com/joshcord99/Personal-Vehicle-Builder-Generator/blob/main/Personal-Vehicle-Builder-Generator.gif)
+A TypeScript CLI application that lets you create and manage different types of vehicles (Cars, Trucks, Motorbikes) with interactive commands.
 
+## Features
 
-## Description
-This project allows users to create, select, and perform actions on different types of vehicles such as Cars, Trucks, and Motorbikes from the command line. The system uses the inquirer package to prompt the user and guide them through various actions.
+- Create vehicles (Cars, Trucks, Motorbikes)
+- Perform actions on vehicles (start, accelerate, decelerate, turn, reverse)
+- Special actions: Trucks can tow other vehicles, Motorbikes can do wheelies
+- View detailed vehicle information
 
-## Badges
-None.
+## Installation
 
-## Table of Contents
-- [Installation Instructions](#installation-instructions)
-- [Usage](#usage)
-- [License](#license)
-- [Contributions](#contributions)
-- [Test](#test)
-- [Questions](#questions)
-- [Links](#links)
-
-## Installation Instructions
-Clone my repository, open in the folder terminal, initiate by node index.js
+```bash
+npm install
+```
 
 ## Usage
-Install Node.js,
-Install inquirer package
 
-## License
-None.
+```bash
+npm start
+```
 
-## Contributions
-Feel free to fork this project and submit a pull request for any improvements.
+## Vehicle Types
 
-## Test
-Try running the Personal-Vehicle-Builder-Generator with different inputs.
+- **Cars**: 4 wheels, standard vehicle actions
+- **Trucks**: 4 wheels, can tow other vehicles
+- **Motorbikes**: 2 wheels, can perform wheelies
 
+## Actions Available
 
-## Questions
-- GitHub: [joshcord99](https://github.com/joshcord99)
-- Email: joshcord99@gmail.com
-  
-## Links
-- https://app.screencastify.com/v3/watch/VMbwfvDIpwOZXaEtjlee
-  
+- Start/Stop vehicle
+- Accelerate/Decelerate
+- Turn left/right
+- Reverse
+- Print vehicle details
+- Tow (Trucks only)
+- Wheelie (Motorbikes only)
+
+## Project Structure
+
+```
+src/
+├── classes/          # Vehicle classes
+├── interfaces/       # TypeScript interfaces
+├── constants/        # Vehicle constants
+├── types/           # Type definitions
+├── utils/           # Utility functions
+└── index.ts         # Main entry point
+```

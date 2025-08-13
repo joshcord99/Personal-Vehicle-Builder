@@ -1,10 +1,15 @@
+import { DEFAULT_WHEEL_SPECS } from "../constants/vehicleConstants.js";
+
 // Wheel class that defines the properties of a wheel
 class Wheel {
   // Declare properties of the Wheel class using private access modifier
   private diameter: number;
   private tireBrand: string;
   // Constructor for the Wheel class
-  constructor (diameter: number = 18, tireBrand: string = "GoodYear") {
+  constructor(
+    diameter: number = DEFAULT_WHEEL_SPECS.DIAMETER,
+    tireBrand: string = DEFAULT_WHEEL_SPECS.TIRE_BRAND
+  ) {
     this.diameter = diameter;
     this.tireBrand = tireBrand;
   }
